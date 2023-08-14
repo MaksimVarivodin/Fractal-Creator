@@ -12,7 +12,11 @@ namespace IDZ
     public class Polygon
     {
         private Side[] sides;
-        public Side[] Sides { get {
+        public Side[] Sides { 
+            protected set { 
+                sides = value;  
+            }
+            get {
                 if (sides != null) {
                     return sides;
                 }

@@ -71,7 +71,7 @@ namespace IDZ.Services
 
         public void MoveTo(PointF newCenter)
         {
-            poly = (LineStarPolygon)Polygon.MovePolygon(poly, center, newCenter);
+            poly = new LineStarPolygon(Polygon.MovePolygon(poly, center, newCenter));
         }
 
         public void Rotate(double angle)

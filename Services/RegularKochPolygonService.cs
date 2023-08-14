@@ -46,7 +46,8 @@ namespace IDZ
         }
        
         public void MoveTo(PointF newCenter) {
-            poly = (RegularKochPolygon)Polygon.MovePolygon(poly, center, newCenter);
+
+            poly = new RegularKochPolygon(Polygon.MovePolygon(poly, center, newCenter));
         }
         public void MoveByX(float moveValue) {
             PointF newCenter = new PointF();

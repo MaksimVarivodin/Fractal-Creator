@@ -14,6 +14,8 @@ namespace IDZ
         public RegularKochPolygon(Side[] sides) : base(sides)
         {
         }
+        public RegularKochPolygon(Polygon otherPolygon) : base(otherPolygon.Sides) { }
+
         public static RegularKochPolygon GenerateRegularKochPolygon(PointF center, double radius, int vertices, int kochDepth) {
             if (vertices <= 2)
             {
@@ -32,6 +34,7 @@ namespace IDZ
             Side[] kochSidesArray = kochSidesList.ToArray();
             return new RegularKochPolygon(kochSidesArray);
         }
+        
         public static LineStarPolygon GenerateLineStarPolygon(RegularKochPolygon poly)
         {
             PointF center = RegularPolygon.CalculateRegularCircumCenter(poly).Value;

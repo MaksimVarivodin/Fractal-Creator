@@ -19,15 +19,7 @@ namespace IDZ.Services
         int     lineWidth   ;
         int     frameWidth  ;
         int     frameHeight ;
-        int StartIndex { get {
-                return frameDrawing.StartIndex;
-            } 
-        }
-        int EndIndex {
-            get {
-                return frameDrawing.EndIndex;
-            }
-        }
+
         public int PointsCount
         {
             get
@@ -211,7 +203,7 @@ namespace IDZ.Services
 
         public void MoveTo(PointF newCenter)
         {
-            MoveTo(newCenter);
+            frameDrawing.MoveTo(newCenter);
         }
         public void SetDrawingRange(int startIndex, int endIndex) { 
             frameDrawing.SetDrawingRange(startIndex, endIndex);
@@ -221,5 +213,6 @@ namespace IDZ.Services
         {
             image.Save(Path);
         }
+
     }
 }
