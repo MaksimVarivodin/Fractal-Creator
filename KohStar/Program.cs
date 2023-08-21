@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace IDZ
+namespace KohStar
 {
     internal static class Program
     {

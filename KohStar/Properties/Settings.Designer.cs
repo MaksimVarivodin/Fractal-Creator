@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace IDZ.Properties
+namespace KohStar.Properties
 {
 
 
